@@ -1,12 +1,13 @@
 # IA - Trabalho 01 2020/2 EAD
-### Alunos: Eduarda e Caicke<BR><BR>
+### Alunos: Eduarda e Caicke
+<br>
 
 
-O código foi desenvolvido em Python e para executá-lo, siga o exemplo abaixo:
+O código desenvolvido para este trabalho foi criado usando a linguagem Python e para executá-lo, basta seguir o exemplo abaixo:
 ```
-python3 mapa.txt (0,0) (9,8)
+python3 arquivo.txt pontoPartida pontoFinal
 ```
 Sendo as entradas:<br>
-mapa.txt = arquivo contendo uma matriz<BR>
-(0,0) = ponto de partida<BR>
-(9,8) = ponto de chegada<BR>
+arquivo = arquivo contendo uma matriz <br>
+ponto de partida = (0,0) <br>
+ponto de chegada = (9,8) <br>
