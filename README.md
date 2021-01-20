@@ -112,7 +112,7 @@ Percorremos o caminho monitorando o pai de cada um dos nós que foi escolhido. A
 O algoritmo encerra a execução e conseguimos verificar o desenho e a lista que cada coordenada que devemos percorrer no melhor caminho entre os dois pontos escolhidos.
 
 <figure style="text-align: center">
-    <img src="images/implementacao5.png" alt="implementacao5" style="zoom:100%;" />
+    <img src="images/implementacao6.png" alt="implementacao5" style="zoom:100%;" />
     <figcaption>Tempo medido usando a biblioteca <code>time</code> do Python.</figcaption>
 </figure>
 
