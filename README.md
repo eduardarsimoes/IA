@@ -48,7 +48,9 @@ Onde:
     <li><i>h(n)</i> é a heurística (estimativa) da distância entre o nó (ponto) corrente e o ponto final (objetivo);</li>
     <li><i>g(n)</i> é a custo para se mover da ponto inicial até o ponto corrente. Ou a soma das células percorridas até o ponto atual. </li>
 </ul>
-
+Para o cálculo da heurística, utilizamos a fórmula da distância de Manhattan:
+<br>
+![distancia-manhattan](images/formula.jpg)
 <br>
 
 Com isso, cada passo disponível, ou seja, ignorando os obstáculos, é avaliado e pulamos para o ponto vizinho de menor custo, em cada iteração.
