@@ -1,5 +1,5 @@
 import sys
-import time
+
 # funcao que le a matriz do arquivo e molda numa lista
 
 
@@ -107,7 +107,7 @@ def a_star(matriz, naoAchou, posInicial, posFinal, inicio, fim):
 
 
 def main():
-    start = time.time()
+
     naoAchou = True
 
     arquivo = sys.argv[1]
@@ -122,9 +122,7 @@ def main():
 
     caminho = a_star(matriz, naoAchou, posInicial, posFinal, inicio, objetivo)
     desenhaCaminho(matriz, caminho, posInicial, posFinal)
-    end = time.time()
-    print()
-    print("Tempo de execução: %.3f segundos" % (end-start))
+
     print()
 
 
