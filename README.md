@@ -50,7 +50,9 @@ Onde:
 </ul>
 Para o cálculo da heurística, utilizamos a fórmula da distância de Manhattan:
 <br>
-![distancia-manhattan](images/formula.jpg)
+
+![formula](images/formula.jpg)
+
 <br>
 
 Com isso, cada passo disponível, ou seja, ignorando os obstáculos, é avaliado e pulamos para o ponto vizinho de menor custo, em cada iteração.
