@@ -1,6 +1,7 @@
 # Inteligência Artificial - Trabalho 01 2020/2 EAD
 ### Alunos: Eduarda Simões e Caicke Pinheiro<BR><BR>
 
+## Como executar
 O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo, passando como parâmetro o arquivo com a matriz e as coordenadas separadas por vírgula e espaço.
 
 ```
@@ -22,7 +23,7 @@ python3 .\a-star.py mapa.txt 0, 0, 9, 8
     <li>9 = linha do ponto final;</li>
     <li>8 = coluna do ponto final;</li>
 </ul>
-
+<BR>
 
 ## Explicação teórica
 
@@ -35,12 +36,9 @@ O **algoritmo A*** é bastante utilizado para encontrar o menor caminho entre do
     <figcaption>GIF retirado em <a href="tickstales.com">tickstales.com</a></figcaption>
 </figure>
 
+<br>
 
-
-
-## <br>
-
-O  que torna o algoritmo tão eficiente é a presença de uma função ${f(n)}$ que prevê o custo do próximo passo que será dado.  
+O  que torna o algoritmo tão eficiente é a presença de uma função f(n) que prevê o custo do próximo passo que será dado.  
 
 <div style="text-align:center"><i>f(n) = g(n) + h(n)</i></div>
 
@@ -54,19 +52,19 @@ Onde:
 <br>
 
 Com isso, cada passo disponível, ou seja, ignorando os obstáculos, é avaliado e pulamos para o ponto vizinho de menor custo, em cada iteração.
-
+<BR><BR>
 ## Problema proposto
 
-No problema, nos é dado uma matriz e as coordenadas iniciais e finais que teremos pela linha de comando, para calcular o melhor caminho.
+No problema, é passado pela linha de comando uma matriz e as coordenadas iniciais e finais em que a paritir disso, temos que buscar o caminho correto do ponto de partida até o ponto final, desviando dos obstáculos presentes na matriz.
 
 ![Foto da matriz de entrada](images/foto-matriz.png)
 
 ![foto-pontos](images/foto-pontos.png)
 
-Os elementos com o valor 1 representam os obstáculos que teremos que desviar durante o caminho. Já os elementos com valor 0 estão livres para percorrermos.
+Os elementos na matriz com o valor 1 representam estes obstáculos que teremos que desviar durante o caminho. Já os elementos com o valor 0 estão livres para percorrermos.
 
-Com os pontos iniciais e finais, temos que achar o melhor caminho e mostrar na tela a lista das coordenadas que iremos percorrer.
-
+Com os pontos iniciais e finais, temos que calcular o melhor caminho e mostrar na tela a lista das coordenadas que iremos percorrer.
+<BR><BR>
 ## Implementação
 
 Nosso algoritmo consiste em três partes, que se repetem: 
@@ -104,7 +102,7 @@ Caso o próximo passo escolhido for o ponto final, a iteração é encerrada e p
 ![image-20210119211750734](images/implementacao4.png)
 
 Percorremos o caminho monitorando o pai de cada um dos nós que foi escolhido. Assim conseguimos obter a trajetória que foi traçada pelo algoritmo.
-
+<BR><BR>
 ## Resultado
 
 O algoritmo encerra a execução e conseguimos verificar o desenho e a lista que cada coordenada que devemos percorrer no melhor caminho entre os dois pontos escolhidos.
