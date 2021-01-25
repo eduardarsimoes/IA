@@ -1,5 +1,5 @@
 # Inteligência Artificial - Trabalho 01 2020/2 EAD
-### Alunos: Eduarda Simões e Caicke Pinheiro<BR><BR>
+### Alunos: Caicke Pinheiro e Eduarda Simões<BR><BR>
 
 ## Como executar
 O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo, passando como parâmetro o arquivo com a matriz e as coordenadas separadas por espaço.
