@@ -63,7 +63,7 @@ No problema, é passado pela linha de comando uma matriz e as coordenadas inicia
 
 ![Foto da matriz de entrada](images/foto-matriz.png)
 
-![foto-pontos](images/foto-pontos.png)
+![foto-pontos](images/foto-pontos2.png)
 
 Os elementos na matriz com o valor 1 representam estes obstáculos que teremos que desviar durante o caminho. Já os elementos com o valor 0 estão livres para percorrermos.
 
