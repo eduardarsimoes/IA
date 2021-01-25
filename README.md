@@ -5,13 +5,13 @@
 O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo, passando como parâmetro o arquivo com a matriz e as coordenadas separadas por vírgula e espaço.
 
 ```
-python3 <arquivo_contendo_matriz> <coordenadas_separadas_por_virgula_e_espaco>
+python3 a-star.py <arquivo_contendo_matriz> <coordenadas_separadas_por_virgula_e_espaco>
 ```
 
 Como por exemplo:
 
 ```
-python3 .\a-star.py mapa.txt 0, 0, 9, 8
+python3 .\a-star.py mapa.txt 0 0 9 8
 ```
 **Sendo:**<br>
 
