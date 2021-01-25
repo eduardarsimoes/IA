@@ -2,10 +2,10 @@
 ### Alunos: Eduarda Simões e Caicke Pinheiro<BR><BR>
 
 ## Como executar
-O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo, passando como parâmetro o arquivo com a matriz e as coordenadas separadas por vírgula e espaço.
+O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo, passando como parâmetro o arquivo com a matriz e as coordenadas separadas por espaço.
 
 ```
-python3 a-star.py <arquivo_contendo_matriz> <coordenadas_separadas_por_virgula_e_espaco>
+python3 a-star.py <arquivo_contendo_matriz> <coordenadas_separadas_por_espaco>
 ```
 
 Como por exemplo:
