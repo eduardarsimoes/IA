@@ -1,8 +1,6 @@
 import sys
 
-# funcao que le a matriz do arquivo e molda numa lista
-
-
+# Funcao que le a matriz do arquivo
 def leMatriz(arq):
     arq = open("mapa.txt", "r")
     linha = arq.readline()
@@ -13,20 +11,20 @@ def leMatriz(arq):
         linhas.append(lin)
         linha = arq.readline()
 
-    # transforma os elementos matriz em numeros inteiros
+    # Transforma os elementos matriz em numeros inteiros
     for elem in linhas:
         valores = [int(val) for val in elem]
         matriz.append(valores)
     return matriz
 
-
+# Funcao que calcula a distancia dos pontos
 def heuristica(pAtual, pProx):
-    # distancia de manhattan
+    # Distancia de manhattan
     (x1, y1) = pAtual[0], pAtual[1]
     (x2, y2) = pProx[0], pProx[1]
     return abs(x1 - x2) + abs(y1 - y2)
 
-
+# Funcao que desenha o caminho percorrido do ponto de partida ao ponto final
 def desenhaCaminho(mapa, caminho, ini, fim):
     print('\n\nCaminho a ser percorrido:\n')
     impr = ''
@@ -40,18 +38,21 @@ def desenhaCaminho(mapa, caminho, ini, fim):
         mapa[ini[0]][ini[1]] = 'start'  # marca um x no começo
         mapa[item[0]][item[1]] = '*'
     print()
+    
     for i in range(len(mapa)):
         for j in range(len(mapa[0])):
             print("\t", mapa[i][j], end="")
         print()
 
         mapa[fim[0]][fim[1]] = 'end'  # marca um x na chegada
+    print()
 
-
-def a_star(matriz, naoAchou, posInicial, posFinal, inicio, fim):
+# Funcao A*
+def a_star(matriz, naoAchou, posInicial, posFinal):
     listaAberta = []
     listaFechada = []
     dic = {}
+    
     while naoAchou:
         if listaAberta == []:
             atual = [None, posInicial, None]
@@ -62,28 +63,28 @@ def a_star(matriz, naoAchou, posInicial, posFinal, inicio, fim):
             atual = listaAberta[0]
             posAtual = atual[1]
 
-        # posicoes:  0 = ^,   1 = >,  2 = v,  3 = <
+        # Posicoes:  0 = ^,   1 = >,  2 = v,  3 = <
         for pos in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
             posVizinho = (posAtual[0] + pos[0], posAtual[1] + pos[1])
 
-            # se vizinho estiver em uma das listas
+            # Verifica se vizinho ja foi visitado anteriormente
             if posVizinho in dic or posVizinho == posInicial:
                 continue
 
-            # se nao existir vizinho
+            # Verifica se as posicoes estao fora da matriz
             if posVizinho[0] < 0 or posVizinho[1] < 0 or posVizinho[0] >= len(matriz) or posVizinho[1] >= len(matriz[-1]):
                 continue
 
-            # se vizinho for barreira
+            # Verifica se vizinho é uma barreira
             if matriz[posVizinho[0]][posVizinho[1]] == 1:
                 continue
 
-            # se vizinho for objetivo
+            # Verifica se vizinho é o objetivo
             if posVizinho == posFinal:
                 naoAchou = False
                 break
 
-            # calculando g, h e f
+            # Calcula h, g e f
             h = heuristica(posVizinho, posFinal)
             g = int(dic.get(posAtual)) + 1
             f = g + h
@@ -105,25 +106,19 @@ def a_star(matriz, naoAchou, posInicial, posFinal, inicio, fim):
 
     return caminho
 
-
+# Main
 def main():
 
     naoAchou = True
 
     arquivo = sys.argv[1]
-
     posInicial = int(sys.argv[2].strip()), int(sys.argv[3].strip())
+    posFinal = int(sys.argv[4].strip()), int(sys.argv[5].strip())
 
     matriz = leMatriz(arquivo)
-    inicio = matriz[posInicial[0]][posInicial[1]]
-
-    posFinal = int(sys.argv[4].strip()), int(sys.argv[5].strip())
-    objetivo = matriz[posFinal[0]][posFinal[1]]
-
-    caminho = a_star(matriz, naoAchou, posInicial, posFinal, inicio, objetivo)
+    
+    caminho = a_star(matriz, naoAchou, posInicial, posFinal)
     desenhaCaminho(matriz, caminho, posInicial, posFinal)
-
-    print()
 
 
 if __name__ == '__main__':
