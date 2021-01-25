@@ -13,11 +13,10 @@ Como por exemplo:
 ```
 python3 .\a-star.py mapa.txt 0 0 9 8
 ```
-**Sendo:**<br>
+**Sendo respectivamente:**<br>
 
 <ul>
     <li><i>mapa.txt</i> = nome do arquivo contendo uma matriz;</li>
-    e respectivamente:
     <li>0 = linha do ponto inicial;</li>
     <li>0 = coluna do ponto inicial;</li>
     <li>9 = linha do ponto final;</li>
@@ -33,21 +32,21 @@ O **algoritmo A*** é bastante utilizado para encontrar o menor caminho entre do
 
 <figure style="text-align:center">
 	<img src="https://images.squarespace-cdn.com/content/v1/55d17289e4b061baebe86844/1459018988512-4T0IKASL0N6MFR9WAMOQ/ke17ZwdGBToddI8pDm48kO3TOK92jGIWblMSoPU90_JZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVG0w0rBsGZhTH4AYPBrEWk7vcIdJXHdD5IfPOdlJhWAUGQ6l2WM7tn7mqHTODzkmeM/image-asset.gif" alt="tickstales.com" style="zoom:50%;" />
-    <figcaption>GIF retirado em <a href="tickstales.com">tickstales.com</a></figcaption>
+<i>GIF retirado em <a href="tickstales.com">tickstales.com</a></i>
 </figure>
 
 <br>
+<br>
 
-O  que torna o algoritmo tão eficiente é a presença de uma função f(n) que prevê o custo do próximo passo que será dado.  
-
-<div style="text-align:center"><i>f(n) = g(n) + h(n)</i></div>
-
+O  que torna o algoritmo tão eficiente é a presença de uma função (<i><b>f(n)</b>= g(n) + h(n)</i></div>) que prevê o custo do próximo passo que será dado.  
+<br>
 Onde:
 
 <ul>
     <li><i>h(n)</i> é a heurística (estimativa) da distância entre o nó (ponto) corrente e o ponto final (objetivo);</li>
     <li><i>g(n)</i> é a custo para se mover da ponto inicial até o ponto corrente. Ou a soma das células percorridas até o ponto atual. </li>
 </ul>
+<br>
 Para o cálculo da heurística, utilizamos a fórmula da distância de Manhattan:
 <br>
 
@@ -63,7 +62,7 @@ No problema, é passado pela linha de comando uma matriz e as coordenadas inicia
 
 ![Foto da matriz de entrada](images/foto-matriz.png)
 
-![foto-pontos](images/foto-pontos2.png)
+![foto-pontos2](images/foto-pontos.png)
 
 Os elementos na matriz com o valor 1 representam estes obstáculos que teremos que desviar durante o caminho. Já os elementos com o valor 0 estão livres para percorrermos.
 
