@@ -31,7 +31,6 @@ def desenhaCaminho(mapa, caminho, ini, fim):
     caminho.reverse()
     for item in caminho:
         impr += "("+str(item[0])+","+str(item[1]) + ") -> "
-        #print(item, end="")
     print(impr[:-4])
 
     for item in caminho:
@@ -54,7 +53,7 @@ def a_star(matriz, naoAchou, posInicial, posFinal):
     dic = {}
     
     while naoAchou:
-        if listaAberta == []:
+        if not listaAberta:
             atual = [None, posInicial, None]
             listaAberta.append(atual)
             posAtual = posInicial
@@ -72,9 +71,9 @@ def a_star(matriz, naoAchou, posInicial, posFinal):
                 continue
 
             # Verifica se as posicoes estao fora da matriz
-            if posVizinho[0] < 0 or posVizinho[1] < 0 or posVizinho[0] >= len(matriz) or posVizinho[1] >= len(matriz[-1]):
+            if verifica_posicoes(matriz, posVizinho):
                 continue
-
+            
             # Verifica se vizinho é uma barreira
             if matriz[posVizinho[0]][posVizinho[1]] == 1:
                 continue
@@ -106,17 +105,34 @@ def a_star(matriz, naoAchou, posInicial, posFinal):
 
     return caminho
 
+# Funcao que verifica se as posicoes estao fora da matriz
+def verifica_posicoes(matriz, pos):
+    if pos[0] < 0 or pos[1] < 0 or pos[0] >= len(matriz) or pos[1] >= len(matriz[-1]):
+        return True
+    return False
+
+# Funcao que pede para inserir posicoes adequadas com a matriz
+def ajustes_posicoes(pos, frase):
+    pos = input("Posicoes {} incorretas, insira novamente: ".format(frase)).strip()
+    return int(pos[0]), int(pos[1])
+
 # Main
 def main():
-
     naoAchou = True
 
     arquivo = sys.argv[1]
-    posInicial = int(sys.argv[2].strip()), int(sys.argv[3].strip())
-    posFinal = int(sys.argv[4].strip()), int(sys.argv[5].strip())
-
     matriz = leMatriz(arquivo)
     
+    posInicial = int(sys.argv[2].strip()), int(sys.argv[3].strip())
+    posFinal = int(sys.argv[4].strip()), int(sys.argv[5].strip())
+    
+    # Verifica se as posicoes estao de acordo com a matriz passada
+    while verifica_posicoes(matriz, posInicial):
+        posInicial = ajustes_posicoes(posInicial, "iniciais")
+    while verifica_posicoes(matriz, posFinal):
+        posFinal = ajustes_posicoes(posInicial, "finais")
+
+    # Calcula e printa o caminho na tela
     caminho = a_star(matriz, naoAchou, posInicial, posFinal)
     desenhaCaminho(matriz, caminho, posInicial, posFinal)
 
