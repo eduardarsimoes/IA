@@ -85,15 +85,15 @@ A lista aberta é inicializada apenas com o nó inicial.
 
 ![implementacao1](images/implementacao1.png)
 
-Além disso, inicializamos um dicionário, que guardará a posição de cada nó e seu custo associado.
+Além disso, inicializamos um dicionário, que guardará a posição de cada nó e seu custo (g) associado.
 
 ### Avaliar o custo de cada vizinho e escolher o mais eficiente
 
-Com isso, avaliamos qual será o próximo vizinho que será visitado, calculando o custo de cada uma deles e adicionando-os na lista aberta para a próxima iteração.
+Com isso, avaliamos qual será o próximo vizinho que será visitado, calculando os custos (f, g e h) de cada uma deles e adicionando-os na lista aberta para a próxima iteração.
 
 ![implementacao2](images/implementacao2.png)
 
-Considerando algumas condições para os vizinhos, como: se o nó adjacente é uma barreira, se ele realmente está localizado em uma faixa disponível no grid (mapa) do problema e se ele já está adicionado na lista aberta (caso já esteja, não é necessário calcular seu ${f(n)})$ novamente.
+Considerando algumas condições para os vizinhos, como: se o nó adjacente é uma barreira, se ele realmente está localizado em uma faixa disponível no grid (mapa) do problema e se ele já está adicionado na lista aberta (caso já esteja, não é necessário calcular seu f(n) novamente.
 
 ### Conferir se alguma condição de parada foi satisfeita e desenhar o caminho
 
