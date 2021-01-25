@@ -6,6 +6,7 @@ def leMatriz(arq):
     linha = arq.readline()
     linhas = []
     matriz = []
+    
     while linha != "":
         lin = linha.strip().split(" ")
         linhas.append(lin)
@@ -15,6 +16,7 @@ def leMatriz(arq):
     for elem in linhas:
         valores = [int(val) for val in elem]
         matriz.append(valores)
+        
     return matriz
 
 # Funcao que calcula a distancia dos pontos
@@ -22,6 +24,7 @@ def heuristica(pAtual, pProx):
     # Distancia de manhattan
     (x1, y1) = pAtual[0], pAtual[1]
     (x2, y2) = pProx[0], pProx[1]
+    
     return abs(x1 - x2) + abs(y1 - y2)
 
 # Funcao que desenha o caminho percorrido do ponto de partida ao ponto final
@@ -29,6 +32,7 @@ def desenhaCaminho(mapa, caminho, ini, fim):
     print('\n\nCaminho a ser percorrido:\n')
     impr = ''
     caminho.reverse()
+    
     for item in caminho:
         impr += "("+str(item[0])+","+str(item[1]) + ") -> "
     print(impr[:-4])
@@ -98,6 +102,7 @@ def a_star(matriz, naoAchou, posInicial, posFinal):
     caminho = []
     pai = posAtual
     caminho.append(posVizinho)
+    
     for i in range(len(listaFechada)-1, -1, -1):
         if listaFechada[i][1] == pai:
             caminho.append(pai)
@@ -129,6 +134,7 @@ def main():
     # Verifica se as posicoes estao de acordo com a matriz passada
     while verifica_posicoes(matriz, posInicial):
         posInicial = ajustes_posicoes(posInicial, "iniciais")
+        
     while verifica_posicoes(matriz, posFinal):
         posFinal = ajustes_posicoes(posInicial, "finais")
 
