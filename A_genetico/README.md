@@ -23,7 +23,7 @@ E, a partir disso, outros foram definidos pelo grupo, são eles:<br>
     <li>numero elitismo = 2;</li>
     <li>numero de descendentes (crossover) na nova geracao = 2;</li>
 </ul>
-<BR>
+<BR><BR>
 
 ## Explicação teórica
 
