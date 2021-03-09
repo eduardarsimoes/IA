@@ -7,7 +7,7 @@ O código foi desenvolvido em **Python** e para executá-lo, navegue até o dire
 ```
 python3 a-genetico.py
 ```
-
+<BR>
 ## Definições
 Alguns critérios foram definidos conforme orientação do trabalho, sendo respectivamente:<br>
 <ul>
@@ -23,7 +23,7 @@ E, a partir disso, outros foram definidos pelo grupo, são eles:<br>
     <li>numero elitismo = 2;</li>
     <li>numero de descendentes (crossover) na nova geracao = 2;</li>
 </ul>
-<BR><BR>
+<BR>
 
 ## Explicação teórica
 
