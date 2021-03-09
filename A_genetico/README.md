@@ -16,11 +16,11 @@ Alguns critérios foram definidos conforme orientação do trabalho, sendo respe
     <li>maximo de X = 20;</li>
     <li>torneio = 2;</li>
     <li>geracoes = 10 e 20;</li>
-	<li>cromossomos por individuo = 16 bits;</li>
+	<li>cromossomos por individuo = 16 bits</li>
 </ul><br>
 E, a partir disso, outros foram definidos pelo grupo, são eles:<br>
 <ul>
-    <li>numero elitismo = 2;</li>
+    <li>numero de elitismo = 2;</li>
     <li>numero de descendentes (crossover) na nova geracao = 2;</li>
 </ul>
 <BR>
@@ -39,7 +39,7 @@ O **algoritmo genético** é uma técnica de busca utilizada na ciência da comp
 <br>
 <br>
 
-O  que torna o algoritmo genético diferente de outros algoritmos tradicionais de otimização é que se baseia num conjunto de soluções possíveis, usando transações probabilísticas e seus resultados não são apresentados como solução única. A função-objetivo é o objeto da otimização, que nesse caso é dada como (<i><b>f(n)</b>= cos(X) * x + 2</i></div>).  
+O  que torna o algoritmo genético diferente de outros algoritmos tradicionais de otimização é que se baseia num conjunto de soluções possíveis, usando transações probabilísticas e seus resultados não são apresentados como solução única. A função-objetivo é o objeto da otimização, que nesse caso é dada como '<i><b>f(n)</b> = cos(X) * x + 2</i>'.  
 <br>
 
 ## Implementação
