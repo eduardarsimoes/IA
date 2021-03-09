@@ -6,7 +6,7 @@ _________
 
 ### 📌 Contexto
 
-O desenvolvimento de trabalhos didáticos que foram desenvolvidos durante a disciplina de Inteligência Artificial, os quais serviram como base para o aprendizado de conceitos e aplicações práticas de conhecimentos adquiridos.
+Trabalhos didáticos que foram desenvolvidos durante a disciplina de Inteligência Artificial, os quais serviram como base para o aprendizado de conceitos e aplicações práticas dos conhecimentos adquiridos.
 
 ### :computer: Projetos
 
