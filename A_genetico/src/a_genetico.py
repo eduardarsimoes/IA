@@ -5,7 +5,7 @@ geracoes      = []
 population    = []
 novageracao   = []
 
-# Gera populacao inicial
+# Gera populacao
 def populationInitialization(numeroIndividuos):
   global population, novageracao
 
@@ -27,8 +27,6 @@ def populationInitialization(numeroIndividuos):
         cromossomos += str(bit)
 
     population.append([cromossomos, math.inf])
-  
-  #print("POPULACAO INICIAL: \n{}\n\n".format(population))
 
 
 # Calcula aptidao
@@ -44,12 +42,10 @@ def fitnessFuction(minimo, maximo, bits):
     
     # Cálculo de aptidão
     aptidao = round(math.cos(x) * x + 2,2)
-    
     population[i][1] = aptidao
 
   # Ordenando, pois queremos o minimo
   population.sort(key = lambda x:x[1])
-  #print("INDIVIDUOS INICIAIS COM RESPECTIVAS APTIDAO: \n{}\n\n".format(population))
 
 
 # Por torneio = 2 pais
@@ -69,11 +65,6 @@ def selection(torneio):
       pai = individuo2
     
     pais.append(pai)
-
-    #print('PAI VENCEDOR {} \n'.format(pai))
-  
-  #print("{} PAIS: \n{}\n\n".format(len(pais),pais))
-
   return pais
 
 
@@ -97,8 +88,6 @@ def crossOver(pais):
 
     filhos.append(filho)
     filhos.append(filha)
-    
-  #print("\n{} Filhos CrossOver: \n{}\n\n".format(len(novageracao),novageracao))
   return filhos
 
 
@@ -118,8 +107,6 @@ def mutation(filhos):
           individuo = individuo[:i] + "0" + individuo[i+1:]
   
   return filhos
-  #print("Filho Mutacao: \n{}\n\n".format(individuo))
-  
 
 
 # Elitismo: guardando os melhores para a nova geracao, nesse caso: 2
