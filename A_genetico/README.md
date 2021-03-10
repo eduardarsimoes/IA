@@ -68,7 +68,7 @@ Depois de calculada, colocamos a aptidão obtida em uma tupla, juntamente com o 
 ### Torneio com os melhores pais
 Após descobrirmos as aptidões de cada indivíduos, os selecionamos aleatoriamente para dois torneios, disputando entre eles para ver quem tem a maior aptidão e escolhendo os ganhadores para serem os pais que iremos realizar o crossover.
 
-![torneio](src/images/torneio.PNG)
+![torneio](src/images/torneio.PNG)<br>
 Com isso, conseguimos realizar o crossover, combinando os genes dos melhores pais da geração.
 
 ### Crossover
