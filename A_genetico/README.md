@@ -43,5 +43,47 @@ O  que torna o algoritmo genético diferente de outros algoritmos tradicionais d
 <br>
 
 ## Implementação
+Para a implementação do algoritmo, seguimos os seguintes passos:
+<ul>
+	<li>Iniciamos a população, com cada indivíduo sendo uma cadeia de bits aleatórios;</li>
+	<li>Calculamos a aptidão de cada indíviduo, usando a função <i>fitness</i>;</li>
+	<li>Selecionamos indívduos para o torneio, a fim de escolher os melhores pais</li>
+	<li>Realizamos o crossover entre os pais, para gerar filhos com as cadeias de bits combinadas</li>
+	<li>Realizamos o crossover entre os pais, para gerar filhos com as cadeias de bits combinadas</li>
+	<li>Depois de obter a nova geração, realizamos mutação entre os indivíduos, porém mantendo os mais aptos (elitismo)</li>
+</ul>
 
-## Resultado
+### Inicializando a população
+Para inicializar a população, geramos uma cadeia aleatória, juntando um bit randômico 16 vezes (16bits) e inicializamos a aptidão com "- infinito", pois iremos calcular mais à frente e consequentemente, substituir o valor.
+
+![inicializando-populacao](src/images/inicializando-populacao.png)
+
+### Calculando aptidão
+No cálculo da aptidão, fixamos os valores mínimos e máximos entre -20 e 20, como dado na especificação e calculamos um valor x usando a função abaixo:
+
+![funcao](https://user-images.githubusercontent.com/37307708/110559442-fc7f3b80-8122-11eb-8c0a-0982303f64bf.PNG)
+
+Depois de calculada, colocamos a aptidão obtida em uma tupla, juntamente com o indivíduo correspondente.
+
+### Torneio com os melhores pais
+Após descobrirmos as aptidões de cada indivíduos, os selecionamos aleatoriamente para dois torneios, disputando entre eles para ver quem tem a maior aptidão e escolhendo os ganhadores para serem os pais que iremos realizar o crossover.
+
+![torneio](src/images/torneio.PNG)
+Com isso, conseguimos realizar o crossover, combinando os genes dos melhores pais da geração.
+
+### Crossover
+No crossover, geramos um ponto de corte aleatório, misturamos os bits dos pais e, caso a taxa do bit fique abaixo da taxa escolhida como parâmetro (no nosso caso, 60%), ele é passado para a cadeia do filho.
+
+![crossover](src/images/crossover.PNG)
+
+### Mutação
+Depois disso, passamos a nova população gerada (menos os melhores - elitismo) para a nossa função de mutação.
+![mutacao](src/images/mutacao.PNG)
+![elitismo](src/images/elitismo.PNG)
+
+## Resultados
+A seguir, mostraremos os resultados de cada geração:
+
+![geral1](https://user-images.githubusercontent.com/37307708/110559387-deb1d680-8122-11eb-9e1a-6b18fa8086ba.JPG)
+![geral2](https://user-images.githubusercontent.com/37307708/110559389-dfe30380-8122-11eb-9e1e-4040c0cfdb87.JPG)
+
