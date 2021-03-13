@@ -5,7 +5,7 @@
 O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo.
 
 ```
-python3 a-genetico.py
+python3 genetico.py
 ```
 <BR>
 ## Definições
