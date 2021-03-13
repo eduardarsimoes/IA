@@ -81,10 +81,12 @@ No crossover, geramos um ponto de corte aleatório, misturamos os bits dos pais 
 
 ### Mutação
 Depois disso, passamos a nova população gerada (menos os melhores - elitismo) para a nossa função de mutação.
+
 ![mutacao](https://user-images.githubusercontent.com/37307708/111019060-98b37780-839b-11eb-845e-ef18532b4d4b.PNG)
 
 No elitismo, verificamos basicamente se "vale a pena" adicionar o filho gerado na próxima geração, ou seja, se o pior pai for
 melhor que o melhor filho, o pai continua na próxima geração e o filho é excluído.
+
 ![elitismo](https://user-images.githubusercontent.com/37307708/111019088-c26c9e80-839b-11eb-93e0-881f97f7d00a.PNG)
 
 
@@ -92,10 +94,13 @@ melhor que o melhor filho, o pai continua na próxima geração e o filho é exc
 A cada execução, os resultados variam, mas na média, os resultados foram bons, minimizando bastante da geração inicial para a geração 20 (por exemplo).
 
 Nas figuras abaixo, por exemplo, temos a comparação do resultado das gerações, com o algoritmo rodando com 10 interações e 20 gerações.
+
 ![ger1](https://user-images.githubusercontent.com/37307708/111018902-a9afb900-839a-11eb-89f8-4a2d291b4364.PNG)
 ![ger20](https://user-images.githubusercontent.com/37307708/111018933-d06def80-839a-11eb-9ec4-1625614063e1.PNG)
 
+Segue também a tabela das médias dos resultados para cada geração, de uma execução com 10 gerações:
 
+![media-10-geracoes](https://user-images.githubusercontent.com/37307708/111019502-69523a00-839e-11eb-866b-17912ab61d31.PNG)
 
 
 
