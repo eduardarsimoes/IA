@@ -56,7 +56,7 @@ Para a implementação do algoritmo, seguimos os seguintes passos:
 ### Inicializando a população
 Para inicializar a população, geramos uma cadeia aleatória, juntando um bit randômico 16 vezes (16bits) e inicializamos a aptidão com "- infinito", pois iremos calcular mais à frente e consequentemente, substituir o valor.
 
-![inicializando-populacao](src/images/inicializando-populacao.png)
+![inicializando-populacao](https://user-images.githubusercontent.com/37307708/111018959-f1364500-839a-11eb-9e3a-5d514b321a32.png)
 
 ### Calculando aptidão
 No cálculo da aptidão, fixamos os valores mínimos e máximos entre -20 e 20, como dado na especificação e calculamos um valor x usando a função abaixo:
@@ -65,25 +65,37 @@ No cálculo da aptidão, fixamos os valores mínimos e máximos entre -20 e 20, 
 
 Depois de calculada, colocamos a aptidão obtida em uma tupla, juntamente com o indivíduo correspondente.
 
+![fitness-function](https://user-images.githubusercontent.com/37307708/111018980-0e6b1380-839b-11eb-8d7f-18a18d73be4a.PNG)
+
 ### Torneio com os melhores pais
 Após descobrirmos as aptidões de cada indivíduos, os selecionamos aleatoriamente para dois torneios, disputando entre eles para ver quem tem a maior aptidão e escolhendo os ganhadores para serem os pais que iremos realizar o crossover.
 
-![torneio](src/images/torneio.PNG)<br>
+![torneio](https://user-images.githubusercontent.com/37307708/111019020-568a3600-839b-11eb-8c40-8a0ef18fefb5.PNG)
+
 Com isso, conseguimos realizar o crossover, combinando os genes dos melhores pais da geração.
 
 ### Crossover
 No crossover, geramos um ponto de corte aleatório, misturamos os bits dos pais e, caso a taxa do bit fique abaixo da taxa escolhida como parâmetro (no nosso caso, 60%), ele é passado para a cadeia do filho.
 
-![crossover](src/images/crossover.PNG)
+![crossover](https://user-images.githubusercontent.com/37307708/111019044-74579b00-839b-11eb-9ec9-d9eade2c0749.PNG)
 
 ### Mutação
 Depois disso, passamos a nova população gerada (menos os melhores - elitismo) para a nossa função de mutação.
-![mutacao](src/images/mutacao.PNG)
-![elitismo](src/images/elitismo.PNG)
+![mutacao](https://user-images.githubusercontent.com/37307708/111019060-98b37780-839b-11eb-845e-ef18532b4d4b.PNG)
+
+No elitismo, verificamos basicamente se "vale a pena" adicionar o filho gerado na próxima geração, ou seja, se o pior pai for
+melhor que o melhor filho, o pai continua na próxima geração e o filho é excluído.
+![elitismo](https://user-images.githubusercontent.com/37307708/111019088-c26c9e80-839b-11eb-93e0-881f97f7d00a.PNG)
+
 
 ## Resultados
-A seguir, mostraremos os resultados de cada geração:
+A cada execução, os resultados variam, mas na média, os resultados foram bons, minimizando bastante da geração inicial para a geração 20 (por exemplo).
 
-![geral1](https://user-images.githubusercontent.com/37307708/110559387-deb1d680-8122-11eb-9e1a-6b18fa8086ba.JPG)
-![geral2](https://user-images.githubusercontent.com/37307708/110559389-dfe30380-8122-11eb-9e1e-4040c0cfdb87.JPG)
+Nas figuras abaixo, por exemplo, temos a comparação do resultado das gerações, com o algoritmo rodando com 10 interações e 20 gerações.
+![ger1](https://user-images.githubusercontent.com/37307708/111018902-a9afb900-839a-11eb-89f8-4a2d291b4364.PNG)
+![ger20](https://user-images.githubusercontent.com/37307708/111018933-d06def80-839a-11eb-9ec4-1625614063e1.PNG)
+
+
+
+
 
