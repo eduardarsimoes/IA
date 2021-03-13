@@ -93,7 +93,7 @@ melhor que o melhor filho, o pai continua na próxima geração e o filho é exc
 ## Resultados
 A cada execução, os resultados variam, mas na média, os resultados foram bons, minimizando bastante da geração inicial para a geração 20 (por exemplo).
 
-Nas figuras abaixo, por exemplo, temos a comparação do resultado das gerações, com o algoritmo rodando com 10 interações e 20 gerações.
+Nas figura abaixo, por exemplo, temos a comparação do resultado das gerações 1 e 20, com o algoritmo rodando com 10 interações.
 
 ![ger1](https://user-images.githubusercontent.com/37307708/111018902-a9afb900-839a-11eb-89f8-4a2d291b4364.PNG)
 ![ger20](https://user-images.githubusercontent.com/37307708/111018933-d06def80-839a-11eb-9ec4-1625614063e1.PNG)
