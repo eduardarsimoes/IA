@@ -30,19 +30,13 @@ Alguns critérios foram definidos, conforme as especificações do trabalho, sen
 ## Explicação teórica
 
 <p align="justify">
-O algoritmo de otimização por enxame de partículas (**PSO**) é utilizado para tratar problemas no domínio contínuo. O PSO emergiu é um tipo de inteligência de enxame inspirado no comportamento de bandos de pássaros. A busca por alimentos e a interação entre aves ao longo do vôo são modeladas como um mecanismo de otimização. Fazendo uma analogia, o termo partícula é adotado para simbolizar os pássaros e representar as possíveis soluções do problema a ser resolvido. A área sobrevoada pelos pássaros é equivalente ao espaço de busca e encontrar o local com comida, ou o ninho, corresponde a encontrar a solução ótima. Para que o bando de pássaros sempre se aproxime do objetivo, ao invés de se perder ou nunca alcançar o alvo focado, utiliza-se o indicador denominado fitness, função que irá avaliar o desempenho das partículas. Para alcançar o alvo focado, sejam os alimentos ou os ninhos, os pássaros fazem uso de suas experiências e da experiência do próprio brando. O termo indicador da experiência ou conhecimento individual de cada partícula, isto é, seu histórico de vida, é o pbest. Em uma abordagem mais simples, o responsável por representar o conhecimento do enxame como um todo é o gbest. 
+O algoritmo de otimização por enxame de partículas (**PSO**) é utilizado para tratar problemas no domínio contínuo. O PSO emergiu é um tipo de inteligência de enxame inspirado no comportamento de bandos de pássaros. A busca por alimentos e a interação entre aves ao longo do vôo são modeladas como um mecanismo de otimização. Fazendo uma analogia, o termo partícula é adotado para simbolizar os pássaros e representar as possíveis soluções do problema a ser resolvido. A área sobrevoada pelos pássaros é equivalente ao espaço de busca e encontrar o local com comida, ou o ninho, corresponde a encontrar a solução ótima. Para que o bando de pássaros sempre se aproxime do objetivo, ao invés de se perder ou nunca alcançar o alvo focado, utiliza-se o indicador denominado fitness, função que irá avaliar o desempenho das partículas. Para alcançar o alvo focado, sejam os alimentos ou os ninhos, os pássaros fazem uso de suas experiências e da experiência do próprio brando. O termo indicador da experiência ou conhecimento individual de cada partícula, isto é, seu histórico de vida, é o pbest. Em uma abordagem mais simples, o responsável por representar o conhecimento do enxame como um todo é o gbest. Para melhor entendimento:
 </p>
 
 <br>
 
 
 ![Tabela de identificação](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/tabela_identificacao.PNG)
-
-<br>
-
-<figure style="text-align:center">
-	<img src="https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/tabela_identificacao.PNG" style="zoom:50%;" />
-</figure>
 
 <br>
 <br>
