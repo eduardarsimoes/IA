@@ -8,8 +8,9 @@ O código foi desenvolvido em **Python** e para executá-lo, navegue até o dire
 python3 pso.py
 ```
 <BR>
+	
 ## Definições
-Alguns critérios foram definidos conforme orientação do trabalho, sendo respectivamente:<br>
+Alguns critérios foram definidos, conforme as especificações do trabalho, sendo respectivamente:<br>
 
    - número de partículas P da população: ?;</li>
    - velocidades iniciais: ~[-77, +77];</li>
@@ -28,19 +29,22 @@ Alguns critérios foram definidos conforme orientação do trabalho, sendo respe
 
 ## Explicação teórica
 
-O **algoritmo pso** é uma técnica de busca utilizada na ciência da computação para achar soluções aproximadas em problemas de otimização e busca.
+<p align="justify">
+O algoritmo de otimização por enxame de partículas (**PSO**) é utilizado para tratar problemas no domínio contínuo. O PSO emergiu é um tipo de inteligência de enxame inspirado no comportamento de bandos de pássaros. A busca por alimentos e a interação entre aves ao longo do vôo são modeladas como um mecanismo de otimização. Fazendo uma analogia, o termo partícula é adotado para simbolizar os pássaros e representar as possíveis soluções do problema a ser resolvido. A área sobrevoada pelos pássaros é equivalente ao espaço de busca e encontrar o local com comida, ou o ninho, corresponde a encontrar a solução ótima. Para que o bando de pássaros sempre se aproxime do objetivo, ao invés de se perder ou nunca alcançar o alvo focado, utiliza-se o indicador denominado fitness, função que irá avaliar o desempenho das partículas. Para alcançar o alvo focado, sejam os alimentos ou os ninhos, os pássaros fazem uso de suas experiências e da experiência do próprio brando. O termo indicador da experiência ou conhecimento individual de cada partícula, isto é, seu histórico de vida, é o pbest. Em uma abordagem mais simples, o responsável por representar o conhecimento do enxame como um todo é o gbest. 
+</p>
+
+<br>
+
+
+![Tabela de identificação](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/tabela_identificacao.PNG)
 
 <br>
 
 <figure style="text-align:center">
-	<img src="https://www.electricalelibrary.com/wp-content/uploads/2018/04/Fluxograma-AG-PT.png" alt="tickstales.com" style="zoom:50%;" />
-<i>Imagem retirada em <a href="www.electricalelibrary.com">www.electricalelibrary.com</a></i>
+	<img src="https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/tabela_identificacao.PNG" style="zoom:50%;" />
 </figure>
 
 <br>
-<br>
-
-O  que torna o algoritmo genético diferente de outros algoritmos tradicionais de otimização é que se baseia num conjunto de soluções possíveis, usando transações probabilísticas e seus resultados não são apresentados como solução única. A função-objetivo é o objeto da otimização, que nesse caso é dada como '<i><b>f(n)</b> = cos(X) * x + 2</i>'.  
 <br>
 
 ## Implementação
