@@ -5,29 +5,30 @@
 O código foi desenvolvido em **Python** e para executá-lo, navegue até o diretório em que o arquivo `.py` se encontra e execute o arquivo.
 
 ```
-python3 genetico.py
+python3 pso.py
 ```
 <BR>
 ## Definições
 Alguns critérios foram definidos conforme orientação do trabalho, sendo respectivamente:<br>
-<ul>
-    <li>numero de individuos na populacao = 10;</li>
-    <li>minimo de X = -20;</li>
-    <li>maximo de X = 20;</li>
-    <li>torneio = 2;</li>
-    <li>geracoes = 10 e 20;</li>
-	<li>cromossomos por individuo = 16 bits</li>
-</ul><br>
-E, a partir disso, outros foram definidos pelo grupo, são eles:<br>
-<ul>
-    <li>numero de elitismo = 2;</li>
-    <li>numero de descendentes (crossover) na nova geracao = 2;</li>
-</ul>
+
+   - número de partículas P da população: ?;</li>
+   - velocidades iniciais: ~[-77, +77];</li>
+   - intervalo de X: [−512, +512];</li>
+   - intervalo de Y: [−512, +512];</li>
+   - critério de parada: 20, 50 e 100 iterações;</li>
+   - tamanho da população: 50 e 100 individuos;</li>
+   - atualização velocidade da partícula: vi(t + 1) = W ∗ vi(t) + ϕ1 ∗ rand1(.) ∗ ( pB − xi(t) ) + ϕ2 ∗ rand2( gB − xi(t) );</li>
+   - atualização da posição da partícula: xi(t + 1) + xi(t) + vi(t + 1);</li>
+   - mínimo global:</li>
+    ![Mínimo global](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/minimo_global.PNG)
+   - função eggholder:</li>
+    ![Função eggholder](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/funcao.PNG)
+
 <BR>
 
 ## Explicação teórica
 
-O **algoritmo genético** é uma técnica de busca utilizada na ciência da computação para achar soluções aproximadas em problemas de otimização e busca.
+O **algoritmo pso** é uma técnica de busca utilizada na ciência da computação para achar soluções aproximadas em problemas de otimização e busca.
 
 <br>
 
