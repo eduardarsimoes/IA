@@ -1,4 +1,4 @@
-# Inteligência Artificial - Trabalho 02 2020/2 EAD
+# Inteligência Artificial - Trabalho 03 2020/2 EAD
 ### Alunos: Caicke Pinheiro e Eduarda Simões<BR><BR>
 
 ## Como executar
