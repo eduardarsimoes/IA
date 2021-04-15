@@ -38,9 +38,6 @@ O algoritmo de otimização por enxame de partículas (**PSO**) é utilizado par
 
 ![Tabela de identificação](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/tabela_identificacao.PNG)
 
-<br>
-<br>
-
 ## Implementação
 Para a implementação do algoritmo, seguimos os seguintes passos:
 <ul>
