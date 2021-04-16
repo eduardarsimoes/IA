@@ -40,8 +40,38 @@ Alguns critérios foram definidos, conforme as especificações do trabalho, sen
 
 <BR>
 	
-## Implementação
 
+![Fluxograma]()
+
+Considerando o fluxograma, seguimos os seguintes passos:
+- Iniciamos a população 
+- Calculamos a aptidão e a melhor posição local até o momento de cada partícula
+- Descobrimos a partícula com melhor aptidão global
+- Atualizamos a velocidade e a nova posição para cada partícula
+- Repetimos o processo até as condições de parada definidas
+
+### Inicializando a população
+Para inicializar a população, geramos posições aleatórias para cada partícula e uma velocidade aletória comum a todas elas.
+
+![Inicializacao]()
+
+### Calculando a aptidão e a melhor posição local
+Para calcular a aptidão foi usada a função eggholder.
+
+![Aptidao]()
+
+### Descobrindo a partícula com melhor aptidão na escala global
+Feito os cálculos de aptidão, podemos descobrir qual partícula possui a melhor aptidão, para usar sua posição no cálculo de atualização de velocidade.
+
+![Melhor aptidao]()
+
+### Atualizando velocidade e posição local
+Por fim, a velocidade e posição local são atualizadas através das fórmulas:
+
+![Atualizacao velocidade]()
+
+![Atualizacao posicao]()
 
 ## Resultados
+
 
