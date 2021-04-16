@@ -53,24 +53,28 @@ Considerando o fluxograma, seguimos os seguintes passos:
 ### Inicializando a população
 Para inicializar a população, geramos posições aleatórias para cada partícula e uma velocidade aletória comum a todas elas.
 
-![Inicializacao]()
+![main inicializacao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/init.PNG)
+![particula inicializacao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/particula_init.PNG)
 
 ### Calculando a aptidão e a melhor posição local
 Para calcular a aptidão foi usada a função eggholder.
 
-![Aptidao]()
+![particula aptidao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/particula_aptidao.PNG)
+![main ptidao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/aptidao.PNG)
 
 ### Descobrindo a partícula com melhor aptidão na escala global
 Feito os cálculos de aptidão, podemos descobrir qual partícula possui a melhor aptidão, para usar sua posição no cálculo de atualização de velocidade.
 
-![Melhor aptidao]()
+![Melhor aptidao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/gbest.PNG)
 
 ### Atualizando velocidade e posição local
-Por fim, a velocidade e posição local são atualizadas através das fórmulas:
+Por fim, a velocidade e posição local são atualizadas através das respectivas fórmulas.
 
-![Atualizacao velocidade]()
+![main atualizacao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/atualizacao.PNG)
 
-![Atualizacao posicao]()
+![particula atualizacao velocidade](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/particula_atualizacao_v.PNG)
+
+![particula atualizacao posicao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/particula_atualizacao_pos.PNG)
 
 ## Resultados
 
