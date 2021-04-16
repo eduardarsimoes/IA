@@ -42,7 +42,7 @@ Alguns critérios foram definidos, conforme as especificações do trabalho, sen
 
 ## Implementação
 
-![Fluxograma](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/fluxograma.png)
+![Fluxograma](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/fluxograma.jpg)
 
 Considerando o fluxograma, seguimos os seguintes passos:
 - Iniciamos a população 
