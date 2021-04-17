@@ -12,6 +12,7 @@ Trabalhos didáticos que foram desenvolvidos durante a disciplina de Inteligênc
 
 - [Algoritmo A*](https://github.com/eduardarsimoes/IA_Algoritmos/tree/main/A_star)
 - [Agoritmo Genético](https://github.com/eduardarsimoes/IA_Algoritmos/tree/main/A_genetico)
+- [Agoritmo PSO](https://github.com/eduardarsimoes/IA_Algoritmos/tree/main/A_pso)
 _________
 
 ## 👪 Colaboradores<br>
