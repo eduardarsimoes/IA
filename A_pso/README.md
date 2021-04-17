@@ -78,5 +78,9 @@ Por fim, a velocidade e posição local são atualizadas através das respectiva
 ![particula atualizacao posicao](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/particula_atualizacao_pos.PNG)
 
 ## Resultados
+<p align="justify">
+Portanto, foi gerado uma tabela com o melhor resultado, média e desvio padrão para cada execução (10 ao todo), no qual cada execução é composta pela aplicação do algoritmo com 20, 50 e 100 iterações como critério de parada para população composta por 50 e 100 partículas.
+</p>
 
+![Tabela](https://github.com/eduardarsimoes/IA_Algoritmos/blob/main/A_pso/image/tabela_resultado.PNG)
 
